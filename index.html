@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>trance.com.tr | Satılık Alan Adı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gradient: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1f1c2c);
+      --gold: #f7c948;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Urbanist', sans-serif;
+      background: #0f2027;
+      background: var(--gradient);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 3.5rem 3rem;
+      text-align: center;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,215,0,0.3), rgba(255,255,255,0.05));
+      z-index: -1;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 15px rgba(247,201,72,0.45));
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #ffffff, #f7c948);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      color: #ddd;
+    }
+
+    .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(247, 201, 72, 0.3);
+    }
+
+    .contact-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 30px rgba(247, 201, 72, 0.6);
+      color: #fff;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2.5rem 1.5rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.png" alt="trance logo" class="logo" />
+    <h1>trance.com.tr</h1>
+    <p>Bu alan adı <span class="highlight">satılıktır</span>.</p>
+    <a class="contact-btn" href="mailto:u.keserbi@gmail.com">İletişim • u.keserbi@gmail.com</a>
+    <footer>&copy; 2025 trance.com.tr</footer>
+  </div>
+</body>
+</html>
